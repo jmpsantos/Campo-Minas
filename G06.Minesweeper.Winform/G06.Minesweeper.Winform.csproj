@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A97D593-85D9-473E-84EB-047B3A43865B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>G06.Minesweeper.Winform</RootNamespace>
+    <AssemblyName>G06.Minesweeper.Winform</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerCampo.cs" />
+    <Compile Include="ControllerJogador.cs" />
+    <Compile Include="ControllersWF\ControllerWF.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewsWF\Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ConsultaMelhoresTempos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ConsultaMelhoresTempos.Designer.cs">
+      <DependentUpon>ConsultaMelhoresTempos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ConsultarTop10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ConsultarTop10.Designer.cs">
+      <DependentUpon>ConsultarTop10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\DadosVencedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\DadosVencedor.Designer.cs">
+      <DependentUpon>DadosVencedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\LoadingOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\LoadingOnline.Designer.cs">
+      <DependentUpon>LoadingOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ViewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ViewLogin.Designer.cs">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ViewPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ViewPrincipal.Designer.cs">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ViewRecuperarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ViewRecuperarPassword.Designer.cs">
+      <DependentUpon>ViewRecuperarPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsWF\ViewRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsWF\ViewRegister.Designer.cs">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewsWF\Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ConsultaMelhoresTempos.resx">
+      <DependentUpon>ConsultaMelhoresTempos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ConsultarTop10.resx">
+      <DependentUpon>ConsultarTop10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\DadosVencedor.resx">
+      <DependentUpon>DadosVencedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\LoadingOnline.resx">
+      <DependentUpon>LoadingOnline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ViewLogin.resx">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ViewPrincipal.resx">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ViewRecuperarPassword.resx">
+      <DependentUpon>ViewRecuperarPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsWF\ViewRegister.resx">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\party.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{ab828c22-f171-4c0e-9dac-778b29f19089}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G06.Minesweeper.Common\G06.Minesweeper.Common.csproj">
+      <Project>{1cf0a6cb-5a79-46a9-9c4f-316c307d8ae1}</Project>
+      <Name>G06.Minesweeper.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoji_click.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoji_ko.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoji_oculos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoji_sorriso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teste_pontos_laranja_formato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer2pontos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer2pontosBLANK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_clock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_bandeira_portugal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MineIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_dab_winner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_boss_winner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cronometro_draw_removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon_removeb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagSolo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YT_Logo_Formatado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikipedia_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YT_Logo1_removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon_removeb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrophyRBG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MineIconRBG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecoverPasswordRBG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TemosPena.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Troll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minesweeper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinesweeperMod.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnimatedBomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextMINESWEEPER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextNLINE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dois.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bandeira.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bomba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quatro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Painel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tres.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\um.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
