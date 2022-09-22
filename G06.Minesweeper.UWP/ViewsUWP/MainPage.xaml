@@ -1,0 +1,112 @@
+﻿<Page
+    x:Class="G06.Minesweeper.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G06.Minesweeper.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded"   >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="642*"/>
+                <ColumnDefinition Width="319*"/>
+                <ColumnDefinition Width="538*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Dificuldade"
+                    FontSize="32"
+                    Grid.Column="0"
+                    Padding="20 10 20 10" Margin="210,0,0,0" Height="68" Width="205">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem x:Name="facilFlyoutItem"
+                                        Text="Fácil"
+                                        Padding="3"
+                                        FontSize="32"
+                                        Click="facilFlyoutItem_Click"/>
+                        <MenuFlyoutItem x:Name="medioFlyoutItem"
+                                        Text="Médio"
+                                        Padding="3"
+                                        FontSize="32"
+                                        Click="medioFlyoutItem_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+
+            </Button>
+            <TextBlock x:Name="mineCounterTextBlock"
+                       Grid.Column="1"
+                       Text="00"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="48" Height="64" Width="52"/>
+            <TextBlock x:Name= "timerTextBlock"
+                       Grid.Column="1"
+                       Text="00s"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       FontSize="48" 
+                       Height="64" 
+                       Width="85" Grid.ColumnSpan="2" Margin="235,0,0,0"/>
+            <TextBlock x:Name="statusTextBlock"
+                       Grid.Column="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="48" Height="64" Width="0"/>
+            <Button Content="Menu"
+                FontSize="32"
+                Grid.Column="0"
+                Padding="20 10 20 10" Margin="40,0,0,0" Height="68" Width="127">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem x:Name="ConsultarMelhoresTemposFlyoutItem"
+                            Text="Consultar Melhores Tempos"
+                            Padding="3"
+                            FontSize="32"
+                            Click="ConsultarMelhoresTemposFlyoutItem_Click"/>
+                        <MenuFlyoutItem x:Name="AjudaFlyoutItem"
+                            Text="Ajuda"
+                            Padding="3"
+                            FontSize="32"
+                            Click="AjudaFlyoutItem_Click"/>
+                        <MenuFlyoutItem x:Name="JogarOnlineFlyoutItem"
+                            Text="Jogar Online"
+                            Padding="3"
+                            FontSize="32"
+                            Click="JogarOnlineFlyoutItem_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+
+            </Button>
+
+        </Grid>
+
+        <Viewbox Grid.Row="1"
+                 MaxHeight="800"
+                 MaxWidth="1200"
+                 MinWidth="800">
+            <Grid x:Name="gridJogo" 
+                Padding="40">
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="MinWidth" Value="60"/>
+                        <Setter Property="MinHeight" Value="60"/>
+                        <Setter Property="Margin" Value="3"/>
+                        <Setter Property="Background" Value="LightSlateGray"/>
+                    </Style>
+                </Grid.Resources>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>

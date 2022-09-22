@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="G06.Minesweeper.UWP.ViewsUWP.MelhoresTemposUWP"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:G06.Minesweeper.UWP.ViewsUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock FontSize="72" HorizontalAlignment="Left" Margin="366,0,0,0" Text="Melhores Tempos - Fácil  " TextWrapping="Wrap" VerticalAlignment="Top" Height="99" Width="785"/>
+        <TextBlock FontSize="48" HorizontalAlignment="Left" Margin="132,140,0,0" Text="Jogador:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="48" HorizontalAlignment="Left" Margin="970,140,0,0" Text="Tempo:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="48" HorizontalAlignment="Left" Margin="132,240,0,0" Text="Jogador 1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock FontSize="48" HorizontalAlignment="Left" Margin="975,240,0,0" Text="00s" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="BTSair"
+                Content="Sair"
+                FontSize="32"
+                Padding="20 10 20 10" 
+                Margin="640,339,0,0" 
+                Height="69" 
+                Width="110" 
+                Click="BTSair_Click" VerticalAlignment="Top"
+        />
+
+    </Grid>
+</Page>
